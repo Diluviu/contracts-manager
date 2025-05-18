@@ -1,0 +1,71 @@
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(24, 16, 36, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1100;
+}
+
+.modal-content {
+  background: var(--bg-card);
+  border-radius: var(--border-radius);
+  width: 100%;
+  max-width: 500px;
+  color: var(--text-main);
+  box-shadow: var(--shadow-card);
+  padding: 2rem 2.5rem 2.5rem 2.5rem;
+}
+
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 1.25rem;
+  border-bottom: 1.5px solid #a78bfa40;
+}
+
+h2 {
+  margin: 0;
+  color: var(--primary);
+  font-size: 1.45rem;
+  font-weight: 800;
+}
+
+.close-button {
+  background: none;
+  border: none;
+  color: #b4aee8;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.15s;
+  &:hover {
+    color: #fff;
+  }
+}
+
+.contract-details {
+  padding: 1.5rem 0 0 0;
+}
+
+.detail-group {
+  display: grid;
+  gap: 1.4rem;
+}
+
+.detail-item {
+  display: grid;
+  gap: 0.2rem;
+}
+
+label {
+  color: var(--primary);
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.value {
+  color: var(--text-main);
+  font-size: 1.04rem;
+}

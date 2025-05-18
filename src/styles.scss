@@ -1,0 +1,25 @@
+:root {
+  --primary: #a78bfa;
+  --primary-dark: #6d28d9;
+  --bg-main: #181024;
+  --bg-card: #2d2244;
+  --bg-card-light: #a78bfa25;
+  --text-main: #f3f4f6;
+  --text-muted: #cbd5e1;
+  --border-radius: 1.25rem;
+  --shadow-card: 0 8px 32px 0 rgba(31, 38, 135, 0.25);
+}
+
+html,
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, var(--primary-dark) 0%, var(--primary) 100%);
+  background-attachment: fixed;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  color: var(--text-main);
+  background: var(--bg-main);
+}

@@ -1,0 +1,54 @@
+<div class="modal-overlay" (click)="onClose()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+        <div class="modal-header">
+            <h2>Contract Details</h2>
+            <button class="close-button" (click)="onClose()">×</button>
+        </div>
+
+        <div class="contract-details" *ngIf="contract">
+            <div class="detail-group">
+                <div class="detail-item">
+                    <label>Title</label>
+                    <div class="value">{{ contract.title }}</div>
+                </div>
+
+                <div class="detail-item">
+                    <label>Party</label>
+                    <div class="value">{{ contract.party }}</div>
+                </div>
+
+                <div class="detail-item">
+                    <label>Status</label>
+                    <div class="value">
+                        <span class="status-badge" [ngClass]="contract.status.toLowerCase()">
+                            {{ contract.status }}
+                        </span>
+                    </div>
+                </div>
+
+                <div class="detail-item">
+                    <label>Start Date</label>
+                    <div class="value">{{ contract.startDate | date:'mediumDate' }}</div>
+                </div>
+
+                <div class="detail-item">
+                    <label>End Date</label>
+                    <div class="value">{{ contract.endDate | date:'mediumDate' }}</div>
+                </div>
+
+                <div class="detail-item">
+                    <label>Amount</label>
+                    <div class="value">{{ contract.amount | currency }}</div>
+                </div>
+
+                <div class="detail-item">
+                    <label>Duration</label>
+                    <div class="value">
+                        {{ contract.startDate | date:'mediumDate' }} - {{ contract.endDate | date:'mediumDate' }}
+                        ({{ getDuration(contract.startDate, contract.endDate) }})
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

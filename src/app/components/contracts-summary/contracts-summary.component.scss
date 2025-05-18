@@ -1,0 +1,31 @@
+.summary-bar {
+  align-items: center;
+  background: #f8fafc;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 4px 0 rgb(0 0 0 / 0.06);
+  display: flex;
+  font-size: 1rem;
+  gap: 2.5rem;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+  min-height: 36px;
+  padding: 0.5rem 1.5rem;
+}
+
+.summary-item {
+  align-items: baseline;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.summary-label {
+  color: #64748b;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.summary-value {
+  color: #1e293b;
+  font-size: 1.05rem;
+  font-weight: 700;
+}

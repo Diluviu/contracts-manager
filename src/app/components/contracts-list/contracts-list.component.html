@@ -1,0 +1,72 @@
+<div class="contracts-list">
+
+  <!-- Filters Bar -->
+  <div class="filters">
+    <input type="text" [(ngModel)]="searchTerm" placeholder="Search contracts..." class="search-input">
+    <select [(ngModel)]="statusFilter" class="status-filter">
+      <option value="">All Statuses</option>
+      <option value="active">Active</option>
+      <option value="pending">Pending</option>
+      <option value="completed">Completed</option>
+      <option value="terminated">Terminated</option>
+    </select>
+  </div>
+
+  <app-contracts-summary [contracts]="filteredContracts"></app-contracts-summary>
+
+  <div class="info-note">
+    <span class="info-icon">ℹ️</span>
+    Highlighted table rows represent contracts expiring in the next {{ expiringSoonDays }} days.
+  </div>
+
+  <!-- Contracts Table -->
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Party</th>
+        <th>Status</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Amount</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let contract of filteredContracts" (click)="showContractDetails(contract)" class="clickable-row"
+        [class.expiring-soon]="isExpiringSoon(contract)"
+        [title]="isExpiringSoon(contract) ? 'Expiring soon!' : 'Click to view details'">
+        <td>
+          <div class="title-cell">
+            {{ contract.title }}
+          </div>
+        </td>
+        <td>{{ contract.party }}</td>
+        <td class="status-cell">
+          <span class="status-badge" [ngClass]="contract.status.toLowerCase()">
+            {{ contract.status }}
+          </span>
+        </td>
+        <td>{{ contract.startDate | date:'mediumDate' }}</td>
+        <td>{{ contract.endDate | date:'mediumDate' }}</td>
+        <td>{{ contract.amount | currency }}</td>
+        <td class="actions">
+          <button (click)="editContract(contract); $event.stopPropagation()" class="edit-btn">
+            Edit
+          </button>
+          <button (click)="deleteContract(contract); $event.stopPropagation()" class="delete-btn">
+            Delete
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Details Modal -->
+  <app-contract-detail *ngIf="selectedContract" [contract]="selectedContract"
+    (close)="closeContractDetails()"></app-contract-detail>
+</div>
+
+<!-- Edit Modal -->
+<app-contract-edit *ngIf="editingContract" [contract]="editingContract" (save)="saveContract($event)"
+  (cancel)="cancelEdit()"></app-contract-edit>

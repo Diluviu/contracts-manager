@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "Fleet Maintenance Contract",
+    "party": "AutoCare Logistics",
+    "status": "Active",
+    "startDate": "2025-01-10",
+    "endDate": "2025-05-25",
+    "amount": 28000
+  },
+  {
+    "id": 2,
+    "title": "Engine Diagnostics Agreement",
+    "party": "Precision Auto Diagnostics",
+    "status": "Pending",
+    "startDate": "2025-06-01",
+    "endDate": "2026-05-31",
+    "amount": 9500
+  },
+  {
+    "id": 3,
+    "title": "Car Wash Services Contract",
+    "party": "Crystal Shine Auto Spa",
+    "status": "Active",
+    "startDate": "2025-01-01",
+    "endDate": "2025-05-30",
+    "amount": 7200
+  },
+  {
+    "id": 4,
+    "title": "Spare Parts Supply Agreement",
+    "party": "DriveLine Parts Co.",
+    "status": "Terminated",
+    "startDate": "2025-04-01",
+    "endDate": "2025-03-31",
+    "amount": 19000
+  },
+  {
+    "id": 5,
+    "title": "Tire Replacement and Alignment Contract",
+    "party": "SpeedTrack Garage",
+    "status": "Expired",
+    "startDate": "2023-09-15",
+    "endDate": "2024-06-30",
+    "amount": 13500
+  }
+]
