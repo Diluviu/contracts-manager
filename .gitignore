@@ -1,0 +1,75 @@
+# ========================
+# Angular (client folder)
+# ========================
+client/node_modules
+client/dist
+client/tmp
+client/out-tsc
+client/.angular/cache
+
+# Logs
+client/npm-debug.log
+client/yarn-error.log
+
+# Angular tooling
+client/bazel-out
+client/coverage
+
+# VS Code
+client/.vscode/*
+!client/.vscode/settings.json
+!client/.vscode/tasks.json
+!client/.vscode/launch.json
+!client/.vscode/extensions.json
+client/.history/*
+
+# IDEs and editors
+client/.idea/
+client/.project
+client/.classpath
+client/.c9/
+client/*.launch
+client/.settings/
+client/*.sublime-workspace
+
+# Misc
+client/.sass-cache/
+client/connect.lock
+client/libpeerconnection.log
+client/testem.log
+client/typings
+client/.DS_Store
+client/Thumbs.db
+
+# ========================
+# .NET (API folder)
+# ========================
+API/bin/
+API/obj/
+API/.vs/
+API/*.user
+API/*.suo
+API/*.pdb
+API/*.cache
+API/*.ide
+API/Properties/launchSettings.json
+
+# Entity Framework
+API/Migrations/
+
+# Optional: ignore SQLite (commented out if you're tracking it temporarily)
+# API/*.db
+
+# ========================
+# Global
+# ========================
+*.DS_Store
+*.swp
+*.tmp
+*.bak
+*.log
+.env
+.env.*
+
+# VS Code root settings (optional)
+.vscode/
